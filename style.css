@@ -1,16 +1,11 @@
 /* =====================================================
    NORGATES — STYLES
-   EASY SETTINGS at the top: colors and logo sizes.
-   Everything below is the layout, section by section.
+   Colours and sizes live at the top. Layout follows,
+   section by section, in the same order as the page.
    ===================================================== */
 
-/* Shown in place of an image file that isn't in /images yet */
-.placeholder.preview {
-  aspect-ratio: 16 / 7;
-}
-
 /* =====================================================
-   EASY SETTINGS — change colors and sizes here
+   EASY SETTINGS — change colours and sizes here
    ===================================================== */
 :root {
   --bg: #000000;          /* page background */
@@ -41,43 +36,32 @@ h2.big { font-size: clamp(2.4rem, 5.5vw, 3.8rem); }
 .lead { color: var(--text-muted); max-width: 560px; margin: 20px auto 0; }
 .muted { color: var(--text-muted); margin-top: 14px; max-width: 760px; }
 .small { font-size: .875rem; }
-.bold { font-weight: 700; margin-top: 12px; }
 .label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 
 /* ---------- Top bar ---------- */
-.topbar { position: sticky; top: 8px; z-index: 20; height: 56px; display: flex; align-items: center; justify-content: flex-end; padding: 0 8px; background: var(--panel); border-radius: 10px; }
+.topbar { position: sticky; top: 8px; z-index: 20; height: 50px; display: flex; align-items: center; justify-content: flex-end; padding: 0 8px; background: var(--panel); border-radius: 10px; }
 .topbar-logo { position: absolute; left: 50%; transform: translateX(-50%); }
 .topbar-logo img { height: var(--logo-height); width: auto; }
 .topbar-buttons { display: flex; gap: 8px; }
 
 /* ---------- Buttons ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 0; cursor: pointer; font: 600 .875rem var(--font); padding: 9px 20px; border-radius: 999px; color: var(--text);
-  transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s cubic-bezier(.22,1,.36,1), background-color .45s, opacity .45s; }
-.btn:hover { transform: translateY(-2px); }
-.btn:active { transform: scale(.97); transition-duration: .15s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 0; cursor: pointer; font: 600 .875rem var(--font); padding: 9px 20px; border-radius: 999px; color: var(--text); }
 .btn-lg { padding: 13px 26px; }
 .btn-dark { background: var(--card); }
-.btn-dark:hover { background: var(--muted); box-shadow: 0 8px 24px rgba(0,0,0,.5); }
-.btn-accent { background: var(--accent); }
-.btn-accent:hover { box-shadow: 0 8px 28px color-mix(in srgb, var(--accent) 55%, transparent); }
 .btn-white { background: var(--text); color: var(--bg); }
-.btn-white:hover { box-shadow: 0 8px 30px rgba(255,255,255,.25); }
 .btn-soft { background: linear-gradient(180deg, var(--text), var(--glow)); color: var(--bg); }
-.btn-soft:hover { box-shadow: 0 8px 28px color-mix(in srgb, var(--glow) 45%, transparent); }
-.full { width: 100%; }
+.btn-accent { background: var(--accent); color: var(--text); }
 .row { display: flex; gap: 12px; justify-content: center; margin-top: 32px; }
 
 /* ---------- Layout ---------- */
-.panel { background: var(--panel); border-radius: 10px; margin-top: 8px; overflow: hidden; }
+.panel { background: var(--panel); border-radius: 10px; margin-top: 8px; overflow: clip; }
 section { padding: 64px 24px; }
-.center { text-align: center; padding: 96px 24px; }
-.narrow { max-width: 1150px; margin: 0 auto; }
 .glow { background: radial-gradient(ellipse 60% 55% at 50% 0%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%); }
 .hero { text-align: center; padding: 112px 24px 64px; }
 .hero .btn { margin-top: 32px; }
 .cta { text-align: center; margin: 0 8px 8px; border-radius: 14px; padding: 96px 24px; }
 
-/* ---------- Placeholders ---------- */
+/* ---------- Placeholders (shown while an image is empty or missing) ---------- */
 .placeholder { display: grid; place-items: center; border: 1px dashed var(--border); background: var(--muted); color: var(--text-muted); font-size: .65rem; letter-spacing: .1em; border-radius: 8px; }
 
 /* ---------- Artists (endless, clickable) ---------- */
@@ -97,11 +81,16 @@ section { padding: 64px 24px; }
   transition: transform .45s cubic-bezier(.22,1,.36,1), background-color .45s, opacity .45s; }
 .scroller:hover { background: var(--muted); transform: translateY(-50%) scale(1.08); }
 .scroller:active { transform: translateY(-50%) scale(.92); transition-duration: .15s; }
-.scroller:disabled { opacity: .28; pointer-events: none; }
 .scroller svg { width: 18px; height: 18px; }
 .scroller.prev { left: -10px; }
 .scroller.next { right: -10px; }
-.artists-wrap.no-scroll .scroller { display: none; }
+
+/* ---------- "Scroll down" cue: wide white arrow ---------- */
+.scroll-cue { position: relative; z-index: 2; display: inline-flex; align-items: center; justify-content: center; margin-top: 78px; color: var(--text-muted); transition: opacity .5s ease; }
+.scroll-cue svg { width: 50px; height: 15px; animation: cue-drop 1.9s cubic-bezier(.22,1,.36,1) infinite; }
+@keyframes cue-drop { 0% { transform: translateY(-4px); opacity: .35; } 55% { transform: translateY(6px); opacity: .85; } 100% { transform: translateY(-4px); opacity: .35; } }
+
+html.scrolled .scroll-cue { opacity: 0; pointer-events: none; }
 
 /* ---------- Platform marquee ---------- */
 .marquee-wrap { margin-top: 48px; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
@@ -112,15 +101,13 @@ section { padding: 64px 24px; }
 .star { font-size: 1.25rem; line-height: 1; }
 @keyframes scroll { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
 
-/* ---------- Dashboard preview ---------- */
-.preview { width: 100%; max-width: 900px; margin: 40px auto 0; border-radius: 12px; object-fit: cover; }
+/* the strip that sits above the video */
+.platforms { padding: 56px 24px 92px; }
 
-/* ---------- Features ---------- */
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
-.card { background: var(--card); padding: 20px; border-radius: 12px; }
-.card .muted { margin-top: 4px; }
-.yellow { color: var(--star); font-size: 1.25rem; }
-@media (max-width: 760px) { .features { grid-template-columns: 1fr; } }
+.platforms .marquee-wrap { margin-top: 0; }
+.platforms .marquee .logo { height: 72px; min-width: 72px; }
+.platforms .placeholder.logo { width: 72px; font-size: 10px; }
+.platforms .star { font-size: 1.75rem; }
 
 /* ---------- Footer ---------- */
 .footer { padding: 64px 24px; }
@@ -140,22 +127,48 @@ section { padding: 64px 24px; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-/* Mobile navbar */
+/* ---------- Mobile top bar ---------- */
 @media (max-width: 768px) {
-  .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .topbar-logo {
-    margin-left: 0;
-    margin-right: auto;
-    position: static;
-    transform: none;
-  }
-
-  .topbar-buttons {
-    margin-left: auto;
-  }
+  .topbar { display: flex; align-items: center; justify-content: space-between; }
+  .topbar-logo { margin-left: 0; margin-right: auto; position: static; transform: none; }
+  .topbar-buttons { margin-left: auto; }
 }
+
+/* ---------- Side scroller: picture left, text right ---------- */
+.story { position: relative; padding: 0 24px; }
+.story-sticky { position: sticky; top: 0; height: 100vh; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; max-width: 1150px; margin: 0 auto; }
+.story-visual, .story-text { position: relative; height: 60vh; }
+.story-pane { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; opacity: 0; transform: translateY(30px); pointer-events: none; transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+.story-pane.active { opacity: 1; transform: none; pointer-events: auto; }
+.story-visual .story-pane { background: none; border-radius: 16px; align-items: center; }
+.story-text h2 { margin-bottom: 12px; }
+@media (max-width: 760px) { .story-sticky { grid-template-columns: 1fr; gap: 16px; align-content: center; } .story-visual { height: 38vh; } .story-text { height: 30vh; } }
+
+/* the picture fills its side; any size or shape fits without cropping */
+.story-img { width: 100%; height: 100%; object-fit: contain; border-radius: 16px; }
+.placeholder.story-img { background: var(--card); }
+
+/* first step animates in as soon as the page opens */
+.story-pane.intro { animation: pane-in .9s cubic-bezier(.22,1,.36,1) backwards; }
+@keyframes pane-in { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+
+/* progress: one segment per step, fills in as you scroll */
+.story-progress { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; }
+.story-bar { flex: 1; display: flex; gap: 6px; }
+.story-bar span { flex: 1; height: 4px; border-radius: 2px; background: var(--muted); position: relative; overflow: hidden; }
+.story-bar span::after { content: ""; position: absolute; inset: 0; background: var(--text); transform: scaleX(0); transform-origin: left; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+.story-bar span.done::after, .story-bar span.on::after { transform: scaleX(1); }
+
+/* ---------- Video (under the side scroller) ---------- */
+.video { padding: 60px 24px 140px; }
+
+
+.video-frame { position: relative; display: block; max-width: 1150px; margin: 0 auto; border-radius: 16px; overflow: hidden; }
+.video-img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; }
+.placeholder.video-img { background: var(--card); border-color: rgba(255,255,255,.25); font-size: .7rem; }
+.video-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--card) 78%, transparent); backdrop-filter: blur(6px); border: 1px solid var(--border); color: var(--text); pointer-events: none;
+  transition: transform .45s cubic-bezier(.22,1,.36,1), background-color .45s; }
+.video-play svg { width: 26px; height: 26px; margin-left: 3px; }
+.video-frame:hover .video-play { transform: translate(-50%,-50%) scale(1.08); background: var(--muted); }
+
+/* ---------- Accessibility: honour the system "less motion" setting ---------- */

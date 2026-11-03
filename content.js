@@ -34,14 +34,21 @@ const SITE = {
     { name: "TIDAL",         image: "images/platforms/tidal.png" },
   ],
 
-  // "Why Norgates" cards
+  // Image on the left of "Your music, in one place" (any size/shape fits)
+  dashboardImage: "",
+
+  // Video block under the side scroller.
+  // videoImage = poster frame ("" shows a placeholder box); videoLink = where the play button goes.
+  videoImage: "",
+  videoLink: "",
+
+  // "Why Norgates" side-scroller steps (image shows on the left; any size/shape fits)
   features: [
-    { title: "Keep your masters",      text: "You own your music. Always." },
-    { title: "Worldwide distribution", text: "Every major DSP and UGC platform." },
-    { title: "Transparent royalties",  text: "Track earnings by release, store and country." },
-    { title: "Publishing & admin",     text: "We register and collect so you don't have to." },
-    { title: "Playlist pitching",      text: "Editorial pitches for every release." },
-    { title: "Fast payouts",      text: "Partnered with Tipalti." },
+    { title: "Keep your masters", text: "You own your music, and your publishing. Always.", image: "https://www.datocms-assets.com/116987/1767882143-centralized-management.png?auto=format" },
+    { title: "See your numbers", text: "See the data behind your catalog, across every platform.", image: "https://www.datocms-assets.com/116987/1727355774-catalog-performance.png?auto=format" },
+    { title: "Worldwide distribution", text: "Every major DSP and UGC platform.", image: "https://www.datocms-assets.com/116987/1727700521-global-market.png?auto=format" },
+    { title: "Transparent royalties", text: "Track earnings by release, store and country.", image: "https://www.datocms-assets.com/116987/1727354811-statement-approval.png?auto=format" },
+    { title: "Fast payouts", text: "Partnered with Tipalti.", image: "https://www.datocms-assets.com/116987/1777282788-payment-gateways.png?auto=format" },
   ],
 
   // Footer "Company" links

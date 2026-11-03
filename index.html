@@ -1,115 +1,184 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Norgates</title>
-<meta name="description" content="Norgates is Europe's leading independent record label and distributor for independent artists. Release worldwide on every streaming platform, get transparent royalties and keep 100% of your masters.">
-<meta name="keywords" content="Norgates, indie label, music distribution, music distro, independent label, record label, distribute music">
-<meta name="author" content="Norgates Distribution">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#000000">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Norgates Distribution">
-<meta property="og:title" content="Norgates Distribution">
-<meta property="og:description" content="Release, distribute and protect your music — and keep your masters.">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Norgates Distribution">
-<meta name="twitter:description" content="Release, distribute and protect your music — and keep your masters.">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"#org","name":"Norgates","description":"Independent record label for bedroom producers, scene kids and outsiders.","sameAs":[]},{"@type":"WebSite","name":"Norgates","publisher":{"@id":"#org"}},{"@type":"MusicGroup","name":"Norgates","genre":"Independent"}]}</script>
-<link rel="icon" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!--
-  ==========================================================
-  HOW TO EDIT THIS SITE
-  - Text on the page: edit it right here in index.html.
-    Each section is marked with a big comment.
-  - Artists, platform logos, features, footer links, socials
-    and the Apply / Login links: edit content.js (simple lists).
-  - Images: drop files into the /images folder and point to them.
-  - Colors / logo size: top of style.css.
-  ==========================================================
--->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- ================= TOP BAR ================= -->
-<header class="topbar">
-  <a href="#" class="topbar-logo"><img src="images/logo.png" alt="Norgates"></a>
-  <div class="topbar-buttons">
-    <a class="btn btn-dark" data-login>Login</a>
-    <a class="btn btn-soft" data-apply>Apply</a>
-  </div>
-</header>
+    <!-- ============ SEO: edit these ============ -->
+    <title>Norgates Distribution</title>
+    <meta
+      name="description"
+      content="Norgates is Europe's leading independent record label and distributor for independent artists. Release worldwide on every streaming platform, get transparent royalties and keep 100% of your masters."
+    />
+    <meta
+      name="keywords"
+      content="Norgates, indie label, music distribution, music distro, independent label, record label, distribute music"
+    />
+    <meta name="author" content="Norgates Distribution" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
 
-<main class="panel">
+    <!-- Uncomment and set once the site is online, so search engines know the official address.
+    <link rel="canonical" href="https://www.your-domain.com/" />
+    -->
 
-  <!-- ================= HERO ================= -->
-  <section class="hero glow">
-    <h1>Music distribution that does more</h1>
-    <p class="lead">NEXT by Norgates distributes and protects the rights of hundreds of rightsholders — and you keep your masters.</p>
-    <a class="btn btn-white btn-lg" data-apply>Apply to Release</a>
+    <!-- Social sharing cards (Facebook, X, Discord, Slack...) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Norgates Distribution" />
+    <meta property="og:title" content="Norgates Distribution" />
+    <meta property="og:description" content="Release, distribute and protect your music globally." />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Norgates Distribution" />
+    <meta name="twitter:description" content="Release, distribute and protect your music globally." />
 
-    <!-- Artist rail: scrolls forever with the arrows, filled from content.js -->
-    <div class="artists-wrap">
-      <button type="button" class="scroller prev" aria-label="Previous artists">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-      </button>
-      <div class="artists" id="artists"><div class="artists-track" id="artists-track"></div></div>
-      <button type="button" class="scroller next" aria-label="Next artists">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </button>
-    </div>
-  </section>
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "#org",
+            "name": "Norgates",
+            "description": "Independent record label for bedroom producers, scene kids and outsiders.",
+            "sameAs": []
+          },
+          { "@type": "WebSite", "name": "Norgates", "publisher": { "@id": "#org" } },
+          { "@type": "MusicGroup", "name": "Norgates", "genre": "Independent" }
+        ]
+      }
+    </script>
 
-  <!-- ================= PLATFORMS ================= -->
-  <section class="center">
-    <h2 class="big">Heard everywhere</h2>
-    <p class="lead">Every Norgates release goes out to the platforms your listeners already use.</p>
-    <div class="marquee-wrap"><div class="marquee" id="marquee"></div></div><!-- filled from content.js -->
-  </section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  <script>try{history.scrollRestoration='manual'}catch(e){}</script>
+  </head>
 
-  <!-- ================= DASHBOARD PREVIEW ================= -->
-  <section class="narrow">
-    <h2>Your music, in one place</h2>
-    <p class="muted">Get the NEXT dashboard; see every release, every stream and every payout, updated daily. See where your music is growing and get paid without chasing anyone.</p>
-    <img class="preview" src="images/analytics.png" alt="Dashboard">
-  </section>
 
-  <!-- ================= WHY NORGATES ================= -->
-  <section class="narrow">
-    <h2>Why Norgates</h2>
-    <div id="features" class="features"></div><!-- filled from content.js -->
-  </section>
+  <body>
+    <!-- ================= TOP BAR ================= -->
+    <header class="topbar">
+      <a href="#" class="topbar-logo">
+        <img src="images/logo.png" alt="Norgates" />
+      </a>
+      <div class="topbar-buttons">
+        <a class="btn btn-dark" id="loginTop" href="#" target="_blank" rel="noopener">Login</a>
+        <a class="btn btn-soft" id="applyTop" href="#" target="_blank" rel="noopener">Apply</a>
+      </div>
+    </header>
 
-  <!-- ================= CALL TO ACTION ================= -->
-  <section class="cta glow">
-    <h2 class="big">Ready to release?</h2>
-    <div class="row">
-      <a class="btn btn-white btn-lg" data-apply>Apply</a>
-      <a class="btn btn-dark btn-lg" data-login>Login</a>
-    </div>
-  </section>
-</main>
+    <main class="panel">
+      <!-- ================= HERO ================= -->
+      <section class="hero glow">
+        <h1>Music distribution that does more</h1>
+        <p class="lead">
+          NEXT by Norgates distributes and protects the rights of hundreds of rightsholders — and
+          you keep your masters.
+        </p>
+        <a class="btn btn-white btn-lg" id="applyHero" href="#" target="_blank" rel="noopener">
+          Apply to Release
+        </a>
 
-<!-- ================= FOOTER ================= -->
-<footer class="panel footer">
-  <div class="footer-top">
-    <div>
-      <img class="footer-logo" src="images/logo.png" alt="Norgates">
-      <p class="muted small">Let your music work for you</p>
-    </div>
-    <div class="footer-links">
-      <p class="label">Company</p>
-      <ul id="footer-links"></ul><!-- filled from content.js -->
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div id="socials" class="socials"></div><!-- filled from content.js -->
-    <p class="muted small">© 2026 Norgates</p>
-  </div>
-</footer>
+        <!-- Artist row: arrows scroll forever, both ways -->
+        <div class="artists-wrap">
+          <button type="button" class="scroller prev" id="artistPrev" aria-label="Previous artists">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <div class="artists" id="artists">
+            <div class="artists-track" id="artistTrack"></div>
+          </div>
+          <button type="button" class="scroller next" id="artistNext" aria-label="Next artists">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
 
-<script src="content.js"></script>
-<script src="script.js"></script>
-</body>
+        <!-- Animated "scroll down" arrow: fades out once you start scrolling -->
+        <a class="scroll-cue" href="#story" aria-label="Scroll down">
+          <svg viewBox="0 0 48 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 3 24 11 44 3" />
+
+          </svg>
+        </a>
+      </section>
+
+      <!-- ================= SIDE SCROLLER ================= -->
+      <section class="story" id="story">
+        <div class="story-sticky">
+          <!-- LEFT: pictures -->
+          <div class="story-visual" id="storyVisual">
+            <div class="story-pane active intro" id="dashboardPane">
+              <img src="https://www.datocms-assets.com/116987/1750176898-seamless-data.png">
+            </div>
+          </div>
+
+          <!-- RIGHT: text -->
+          <div class="story-text" id="storyText">
+            <div class="story-pane active intro">
+              <h2>Your music, in one place</h2>
+              <p class="muted">
+                Get the NEXT dashboard; see every release, every stream and every payout, updated
+                daily. See where your music is growing and get paid without chasing anyone.
+              </p>
+            </div>
+            <!-- "Why Norgates" steps are added here from content.js -->
+
+            <div class="story-progress" id="storyProgress" aria-hidden="true">
+              <div class="story-bar" id="storyBar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PLATFORM STRIP ================= -->
+      <section class="platforms">
+        <div class="marquee-wrap">
+          <div class="marquee" id="marquee"></div>
+        </div>
+      </section>
+
+      <!-- ================= VIDEO ================= -->
+      <section class="video" id="video"></section>
+
+      <!-- ================= CALL TO ACTION ================= -->
+      <section class="cta glow">
+        <h2 class="big">Ready to release?</h2>
+        <div class="row">
+          <a class="btn btn-white btn-lg" id="applyCta" href="#" target="_blank" rel="noopener">Apply</a>
+          <a class="btn btn-dark btn-lg" id="loginCta" href="#" target="_blank" rel="noopener">Login</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="panel footer">
+      <div class="footer-top">
+        <div>
+          <img class="footer-logo" src="images/logo.png" alt="Norgates" />
+          <p class="muted small">Let your music work for you</p>
+        </div>
+        <div class="footer-links">
+          <p class="label">Company</p>
+          <ul id="footerLinks"></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="socials" id="socials"></div>
+        <p class="muted small">© 2026 Norgates</p>
+      </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
