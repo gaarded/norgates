@@ -47,7 +47,7 @@ const SITE = {
     { title: "Keep your masters", text: "You own your music, and your publishing. Always.", image: "https://www.datocms-assets.com/116987/1767882143-centralized-management.png?auto=format" },
     { title: "See your numbers", text: "See the data behind your catalog, across every platform.", image: "images/analytics.svg" },
     { title: "Worldwide distribution", text: "Every major DSP and UGC platform.", image: "https://www.datocms-assets.com/116987/1727700521-global-market.png?auto=format" },
-    { title: "Transparent royalties", text: "Track earnings by release, store and country.", image: "https://www.datocms-assets.com/116987/1727354811-statement-approval.png?auto=format" },
+    { title: "Transparent royalties", text: "Track earnings by release, store and country.", image: "images/revenue.svg" },
     { title: "Fast payouts", text: "Partnered with Tipalti.", image: "https://www.datocms-assets.com/116987/1777282788-payment-gateways.png?auto=format" },
   ],
 
