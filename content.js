@@ -9,7 +9,7 @@
 const SITE = {
 
   // Where the "Apply" buttons go (opens in a new tab)
-  applyLink: "https://app.youform.com/forms/asbz9hjw",
+  applyLink: "https://norgates.com/signup",
   loginLink: "https://next.norgates.com",
 
   // Artist cards under the hero
