@@ -39,8 +39,8 @@ const SITE = {
 
   // Video block under the side scroller.
   // videoImage = poster frame ("" shows a placeholder box); videoLink = where the play button goes.
-  videoImage: "",
-  videoLink: "",
+  videoImage: "https://norgates.com/images/thumbnail.png",
+  videoLink: "https://norgates.com/videos/preview.mp4",
 
   // "Why Norgates" side-scroller steps (image shows on the left; any size/shape fits)
   features: [
